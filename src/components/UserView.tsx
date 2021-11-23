@@ -5,7 +5,7 @@ import UsersList from "./UsersList";
 
 function UserView() {
   return (
-    <Box mt={8} py={3}>
+    <Box mt={8} py={3} boxShadow="md">
       <UserViewHeader />
       <UsersList />
     </Box>
