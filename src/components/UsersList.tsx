@@ -1,6 +1,9 @@
-import { Box, Button, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import { Box, Table, Tbody, Th, Thead, Tr } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
+import UserListItem from "./UserListItem";
 
 function UsersList() {
+  const { users } = useSelector((state: UsersState) => state);
   return (
     <Box w="full" overflow="auto">
       <Table variant="striped" overflow="auto" colorScheme="gray">
@@ -16,19 +19,9 @@ function UsersList() {
           </Tr>
         </Thead>
         <Tbody>
-          <Tr>
-            <Td>inches</Td>
-            <Td>inches</Td>
-            <Td>inches</Td>
-            <Td>inches</Td>
-            <Td>inches</Td>
-            <Td>
-              <Button>Edit</Button>
-            </Td>
-            <Td>
-              <Button>Delete</Button>
-            </Td>
-          </Tr>
+          {users.map((user: User) => (
+            <UserListItem key={user.id} user={user} />
+          ))}
         </Tbody>
       </Table>
     </Box>
