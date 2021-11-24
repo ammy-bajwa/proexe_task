@@ -1,4 +1,5 @@
-import { Tr, Td, Button } from "@chakra-ui/react";
+import { Tr, Td } from "@chakra-ui/react";
+import DeleteUserButton from "./DeleteUserButton";
 import EditUserButton from "./EditUserButton";
 
 function UserListItem({ user }: any) {
@@ -13,9 +14,7 @@ function UserListItem({ user }: any) {
         <EditUserButton name={user.name} email={user.email} id={user.id} />
       </Td>
       <Td>
-        <Button color="white" colorScheme="red">
-          Delete
-        </Button>
+        <DeleteUserButton id={user.id} />
       </Td>
     </Tr>
   );

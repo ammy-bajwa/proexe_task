@@ -1,14 +1,10 @@
 import {
   Button,
   Flex,
-  FormControl,
-  FormLabel,
-  Input,
   Modal,
   ModalBody,
   ModalContent,
   ModalHeader,
-  Text,
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
