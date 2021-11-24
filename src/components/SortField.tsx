@@ -19,7 +19,6 @@ function SortField() {
       return 0;
     });
 
-    debugger;
     if (selectedValue === "z-a") {
       dispatch(setUsers(sortedArr.reverse()));
     } else if (selectedValue === "a-z") {

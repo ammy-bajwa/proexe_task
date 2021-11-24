@@ -4,7 +4,6 @@ import { SET_USERS } from "../actionTypes";
 export const fetchAndSetUsers = () => {
   return async (dispatch: DispatchType) => {
     const users: User[] = await fetchUsers();
-    console.log({ users, dispatch });
     dispatch(setUsers(users));
   };
 };
