@@ -1,4 +1,5 @@
 import { Tr, Td, Button } from "@chakra-ui/react";
+import EditUserButton from "./EditUserButton";
 
 function UserListItem({ user }: any) {
   return (
@@ -9,9 +10,7 @@ function UserListItem({ user }: any) {
       <Td>{user.email}</Td>
       <Td>{user.address.city}</Td>
       <Td>
-        <Button color="white" colorScheme="yellow">
-          Edit
-        </Button>
+        <EditUserButton name={user.name} email={user.email} id={user.id} />
       </Td>
       <Td>
         <Button color="white" colorScheme="red">

@@ -3,6 +3,7 @@ interface User {
   name: string;
   username: string;
   name: string;
+  email: string;
   address: { city: string };
 }
 

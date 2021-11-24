@@ -5,9 +5,13 @@ export const fetchAndSetUsers = () => {
   return async (dispatch: DispatchType) => {
     const users: User[] = await fetchUsers();
     console.log({ users, dispatch });
-    dispatch({
-      type: SET_USERS,
-      users,
-    });
+    dispatch(setUsers(users));
+  };
+};
+
+export const setUsers = (users: User[]) => {
+  return {
+    type: SET_USERS,
+    users,
   };
 };
